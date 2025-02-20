@@ -1,0 +1,21 @@
+{
+  "name": "sheba-api",
+  "version": "1.0.0",
+  "description": "this project is for sheba api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "nahid",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.5.3",
+    "nodemon": "^3.1.4",
+    "sslcommerz-lts": "^1.1.0"
+  }
+}
