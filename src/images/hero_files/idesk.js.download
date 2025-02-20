@@ -1,0 +1,34 @@
+
+window.$_iDesk_Web_Chat_API || (function(d, w) {
+  var r = $_iDesk_Web_Chat_API = function(c) {
+    r._.push(c);
+  };
+  w.__iDeskWebChat_account = '1648982336000';
+  w.__iDeskWebChat_version = 2;
+  r._ = [];
+  const head = document.head;
+  const link = document.createElement('link');
+  link.href = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.idesk360.com/chat/stylesheet.css';
+  link.rel = 'stylesheet';
+  head.append(link);
+  var webchat = d.createElement('div');
+  webchat.setAttribute('id', 'webchat');
+  document.body.appendChild(webchat)
+  var rc = d.createElement('script');
+  rc.type = 'text/javascript';
+  rc.async = true;
+//rc.setAttribute('charset', 'utf-8');
+  rc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.idesk360.com/chat/bundle.js';
+//rc.src = 'bundle.js';
+  var s = d.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(rc, s);
+  var rcMap = d.createElement('script');
+  rcMap.type = 'text/javascript';
+  rcMap.async = true;
+  rcMap.setAttribute('charset', 'utf-8');
+  rcMap.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.idesk360.com/chat/bundle.map';
+//rcMap.src = 'bundle.map';
+  var srcMap = d.getElementsByTagName('script')[0];
+  srcMap.parentNode.insertBefore(rcMap, srcMap);
+})(document, window);
+
