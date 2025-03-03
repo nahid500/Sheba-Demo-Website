@@ -4,12 +4,14 @@ const port = 5000;
 const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
+require('dotenv').config()
 app.use(cors());
 app.use(express.json());
 
-// const uri = "mongodb+srv://nahid95622:qtr123789%40@trial1.1tkz1.mongodb.net/test?retryWrites=true&w=majority";
 
-const uri = "mongodb+srv://nahid95622:qtr123789%40@trial1.1tkz1.mongodb.net/?retryWrites=true&w=majority&appName=Trial1";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@trial1.1tkz1.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+
+
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -19,10 +21,12 @@ const client = new MongoClient(uri, {
   }
 });
 
-const SSLCommerzPayment = require('sslcommerz-lts')
-const store_id = 'boizo66d3ee8bc47a9'
-const store_passwd = 'boizo66d3ee8bc47a9@ssl'
-const is_live = false //true for live, false for sandbox
+
+
+// const SSLCommerzPayment = require('sslcommerz-lts')
+// const store_id = process.env.STORE_ID
+// const store_passwd = process.env.STORE_PASSWD
+// const is_live = process.env.IS_LIVE  //true for live, false for sandbox
 
 
 // Connect to MongoDB and start the server
