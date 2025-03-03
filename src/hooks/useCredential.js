@@ -17,7 +17,7 @@ const useCredential = () => {
         const fetchUserData = async () => {
             if (id) {
                 try {
-                    const response = await fetch(`http://localhost:5000/user/${id}`);
+                    const response = await fetch(`https://sheba-backend.onrender.com/user/${id}`);
                     const result = await response.json();
                     if (result.user) {
                         setUser(result.user);
@@ -44,7 +44,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:5000/users');
+                const response = await fetch('https://sheba-backend.onrender.com/users');
                 const result = await response.json();
                 if (result.status) {
                     setUsers(result.users || []);
@@ -63,7 +63,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('http://localhost:5000/categories');
+                const response = await fetch('https://sheba-backend.onrender.com/categories');
                 const result = await response.json();
                 if (result.status) {
                     setCategories(result.category || []);
@@ -82,7 +82,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchSlots = async () => {
             try {
-                const response = await fetch('http://localhost:5000/slots');
+                const response = await fetch('https://sheba-backend.onrender.com/slots');
                 const result = await response.json();
                 if (result.status) {
                     setSlots(result.slots || []);
@@ -101,7 +101,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchStaffs = async () => {
             try {
-                const response = await fetch('http://localhost:5000/staffs');
+                const response = await fetch('https://sheba-backend.onrender.com/staffs');
                 const result = await response.json();
                 if (result.status) {
                     setStaffs(result.staffs || []);
@@ -120,7 +120,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch('http://localhost:5000/services');
+                const response = await fetch('https://sheba-backend.onrender.com/services');
                 const result = await response.json();
                 if (result.status) {
                     setServices(result.services || []);

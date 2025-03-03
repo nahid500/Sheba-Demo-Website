@@ -7,7 +7,7 @@ const ViewUsers = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/user/${id}`, {
+            const response = await fetch(`https://sheba-backend.onrender.com/user/${id}`, {
                 method: 'DELETE'
             });
 
@@ -18,7 +18,7 @@ const ViewUsers = () => {
                 // Fetch updated user list
                 const fetchUsers = async () => {
                     try {
-                        const response = await fetch('http://localhost:5000/users');
+                        const response = await fetch('https://sheba-backend.onrender.com/users');
                         const result = await response.json();
 
                         if (result.status) {

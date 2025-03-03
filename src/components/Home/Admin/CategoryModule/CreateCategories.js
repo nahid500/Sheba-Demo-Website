@@ -12,7 +12,7 @@ const CreateCategories = () => {
 
     const fetchUpdatedCategories = async () => {
         try {
-            const response = await fetch('http://localhost:5000/categories');
+            const response = await fetch('https://sheba-backend.onrender.com/categories');
             const result = await response.json();
 
             if (response.ok) {
@@ -35,7 +35,7 @@ const CreateCategories = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/category', {
+            const response = await fetch('https://sheba-backend.onrender.com/category', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

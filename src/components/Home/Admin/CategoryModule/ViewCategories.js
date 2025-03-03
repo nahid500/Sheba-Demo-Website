@@ -7,7 +7,7 @@ const ViewCategories = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/category/${id}`, {
+            const response = await fetch(`https://sheba-backend.onrender.com/category/${id}`, {
                 method: 'DELETE'
             });
 

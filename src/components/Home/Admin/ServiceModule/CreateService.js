@@ -24,7 +24,7 @@ const CreateService = () => {
                 image: imageURL,
             };
 
-            const response = await fetch('http://localhost:5000/service', {
+            const response = await fetch('https://sheba-backend.onrender.com/service', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ const CreateService = () => {
 
     const fetchServices = async () => {
         try {
-            const response = await fetch('http://localhost:5000/services');
+            const response = await fetch('https://sheba-backend.onrender.com/services');
             const result = await response.json();
             if (result.status) {
                 setServices(result.services || []); // Default to empty array if result.services is undefined
