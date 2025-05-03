@@ -12,7 +12,7 @@ const ServiceDetails = () => {
 
         const fetchData = async() => {
             try{
-                const response = await fetch(`https://sheba-backend.onrender.com/service/${id}`)
+                const response = await fetch(`https://shebaxyz-backend.onrender.com/service/${id}`)
                 const result = await response.json()
                 if(result.status){
                     setService(result.service)

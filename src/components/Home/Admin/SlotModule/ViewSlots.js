@@ -7,7 +7,7 @@ const ViewSlots = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`https://sheba-backend.onrender.com/slot/${id}`, {
+            const response = await fetch(`https://shebaxyz-backend.onrender.com/slot/${id}`, {
                 method: 'DELETE'
             });
 
@@ -27,7 +27,7 @@ const ViewSlots = () => {
 
     const fetchUpdatedSlots = async () => {
         try {
-            const response = await fetch('https://sheba-backend.onrender.com/slots');
+            const response = await fetch('https://shebaxyz-backend.onrender.com/slots');
             const result = await response.json();
 
             if (response.ok) {

@@ -28,7 +28,7 @@ const CreateStaff = () => {
                 image: imageURL,
             };
 
-            const response = await fetch('https://sheba-backend.onrender.com/staff', {
+            const response = await fetch('https://shebaxyz-backend.onrender.com/staff', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ const CreateStaff = () => {
 
     const fetchStaffs = async () => {
         try {
-            const response = await fetch('https://sheba-backend.onrender.com/staffs');
+            const response = await fetch('https://shebaxyz-backend.onrender.com/staffs');
             const result = await response.json();
             if (result.status) {
                 setStaffs(result.staffs); // Ensure correct key `staffs`

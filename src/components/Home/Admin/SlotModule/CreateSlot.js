@@ -12,7 +12,7 @@ const CreateSlot = () => {
 
     const fetchUpdatedSlots = async () => {
         try {
-            const response = await fetch('https://sheba-backend.onrender.com/slots');
+            const response = await fetch('https://shebaxyz-backend.onrender.com/slots');
             const result = await response.json();
 
             if (response.ok) {
@@ -37,7 +37,7 @@ const CreateSlot = () => {
         };
 
         try {
-            const response = await fetch('https://sheba-backend.onrender.com/slot', {
+            const response = await fetch('https://shebaxyz-backend.onrender.com/slot', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

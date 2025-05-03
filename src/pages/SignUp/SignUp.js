@@ -26,7 +26,7 @@ const SignUp = () => {
         };
 
         try {
-            const response = await fetch('https://sheba-backend.onrender.com/user', {
+            const response = await fetch('https://shebaxyz-backend.onrender.com/user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

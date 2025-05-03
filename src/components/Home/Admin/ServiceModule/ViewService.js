@@ -8,7 +8,7 @@ const ViewService = () => {
     // Function to fetch the updated list of services
     const fetchServices = async () => {
         try {
-            const response = await fetch('https://sheba-backend.onrender.com/services');
+            const response = await fetch('https://shebaxyz-backend.onrender.com/services');
             const result = await response.json();
 
             if (result.status) {
@@ -25,7 +25,7 @@ const ViewService = () => {
     // Function to handle service deletion
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`https://sheba-backend.onrender.com/service/${id}`, {
+            const response = await fetch(`https://shebaxyz-backend.onrender.com/service/${id}`, {
                 method: 'DELETE'
             });
 

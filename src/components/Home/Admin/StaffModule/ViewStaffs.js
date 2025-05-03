@@ -7,7 +7,7 @@ const ViewStaffs = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`https://sheba-backend.onrender.com/staff/${id}`, {
+            const response = await fetch(`https://shebaxyz-backend.onrender.com/staff/${id}`, {
                 method: 'DELETE'
             });
 
@@ -18,7 +18,7 @@ const ViewStaffs = () => {
                 // Fetch updated user list
                 const fetchStaffs = async () => {
                     try {
-                        const response = await fetch('https://sheba-backend.onrender.com/staffs');
+                        const response = await fetch('https://shebaxyz-backend.onrender.com/staffs');
                         const result = await response.json();
 
                         if (result.status) {

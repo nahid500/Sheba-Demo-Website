@@ -24,7 +24,7 @@ const CreateService = () => {
                 image: imageURL,
             };
 
-            const response = await fetch('https://sheba-backend.onrender.com/service', {
+            const response = await fetch('https://shebaxyz-backend.onrender.com/service', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

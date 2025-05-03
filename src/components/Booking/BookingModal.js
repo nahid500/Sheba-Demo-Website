@@ -53,7 +53,7 @@ const BookingModal = ({ isOpen, onClose, children }) => {
         console.log("Sending form data:", formData);
         
         try {
-            const response = await fetch('https://sheba-backend.onrender.com/booking', {
+            const response = await fetch('https://shebaxyz-backend.onrender.com/booking', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
