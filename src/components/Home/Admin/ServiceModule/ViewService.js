@@ -8,11 +8,11 @@ const ViewService = () => {
     // Function to fetch the updated list of services
     const fetchServices = async () => {
         try {
-            const response = await fetch('https://shebaxyz-backend.onrender.com/services');
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/services`);
             const result = await response.json();
 
             if (result.status) {
-                setServices(result.services || []); // Default to empty array if result.services is undefined
+                setServices(result.services || []); 
             } else {
                 toast.error(result.message || 'Failed to fetch services.');
             }
@@ -25,7 +25,7 @@ const ViewService = () => {
     // Function to handle service deletion
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`https://shebaxyz-backend.onrender.com/service/${id}`, {
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/service/${id}`, {
                 method: 'DELETE'
             });
 

@@ -12,7 +12,7 @@ const CreateUser = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await fetch('https://shebaxyz-backend.onrender.com/users');
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/users`);
             const result = await response.json();
 
             if (result.status) {
@@ -37,7 +37,7 @@ const CreateUser = () => {
         };
 
         try {
-            const response = await fetch('https://shebaxyz-backend.onrender.com/user', {
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/user`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

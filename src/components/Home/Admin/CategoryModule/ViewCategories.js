@@ -7,7 +7,7 @@ const ViewCategories = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`https://shebaxyz-backend.onrender.com/category/${id}`, {
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/category/${id}`, {
                 method: 'DELETE'
             });
 
@@ -26,7 +26,7 @@ const ViewCategories = () => {
 
     const fetchUpdatedCategories = async () => {
         try {
-            const response = await fetch('https://shebaxyz-backend.onrender.com/categories');
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/categories`);
             const result = await response.json();
 
             if (response.ok) {

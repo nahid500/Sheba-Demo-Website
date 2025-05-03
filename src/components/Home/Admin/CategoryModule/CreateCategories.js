@@ -12,7 +12,7 @@ const CreateCategories = () => {
 
     const fetchUpdatedCategories = async () => {
         try {
-            const response = await fetch('https://shebaxyz-backend.onrender.com/categories');
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/categories`);
             const result = await response.json();
 
             if (response.ok) {
@@ -31,11 +31,11 @@ const CreateCategories = () => {
         setBtnText('Processing Registration..');
 
         const formData = {
-            name: data.category_name, // Ensure you use the correct field name here
+            name: data.category_name,
         };
 
         try {
-            const response = await fetch('https://shebaxyz-backend.onrender.com/category', {
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/category`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

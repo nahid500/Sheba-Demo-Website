@@ -24,7 +24,7 @@ const CreateService = () => {
                 image: imageURL,
             };
 
-            const response = await fetch('https://shebaxyz-backend.onrender.com/service', {
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/service`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -65,10 +65,10 @@ const CreateService = () => {
 
     const fetchServices = async () => {
         try {
-            const response = await fetch('https://sheba-backend.onrender.com/services');
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/services`);
             const result = await response.json();
             if (result.status) {
-                setServices(result.services || []); // Default to empty array if result.services is undefined
+                setServices(result.services || []);
             } else {
                 toast.error(result.message || 'Failed to fetch services.');
             }
@@ -78,7 +78,7 @@ const CreateService = () => {
         }
     };
 
-    console.log('Categories:', categories); // Debugging line
+    console.log('Categories:', categories);
 
     return (
         <div>

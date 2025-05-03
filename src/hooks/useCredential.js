@@ -17,7 +17,7 @@ const useCredential = () => {
         const fetchUserData = async () => {
             if (id) {
                 try {
-                    const response = await fetch(`https://shebaxyz-backend.onrender.com/user/${id}`);
+                    const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/user/${id}`);
                     const result = await response.json();
                     if (result.user) {
                         setUser(result.user);
@@ -44,7 +44,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('https://shebaxyz-backend.onrender.com/users');
+                const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/users`);
                 const result = await response.json();
                 if (result.status) {
                     setUsers(result.users || []);
@@ -63,7 +63,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('https://shebaxyz-backend.onrender.com/categories');
+                const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/categories`);
                 const result = await response.json();
                 if (result.status) {
                     setCategories(result.category || []);
@@ -82,7 +82,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchSlots = async () => {
             try {
-                const response = await fetch('https://shebaxyz-backend.onrender.com/slots');
+                const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/slots`);
                 const result = await response.json();
                 if (result.status) {
                     setSlots(result.slots || []);
@@ -101,7 +101,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchStaffs = async () => {
             try {
-                const response = await fetch('https://shebaxyz-backend.onrender.com/staffs');
+                const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/staffs`);
                 const result = await response.json();
                 if (result.status) {
                     setStaffs(result.staffs || []);
@@ -120,7 +120,7 @@ const useCredential = () => {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch('https://shebaxyz-backend.onrender.com/services');
+                const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/services`);
                 const result = await response.json();
                 if (result.status) {
                     setServices(result.services || []);

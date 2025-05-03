@@ -53,7 +53,7 @@ const BookingModal = ({ isOpen, onClose, children }) => {
         console.log("Sending form data:", formData);
         
         try {
-            const response = await fetch('https://shebaxyz-backend.onrender.com/booking', {
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/booking`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const BookingModal = ({ isOpen, onClose, children }) => {
 
     const payNow = async (amount, trx_id) => {
         try {
-            const response = await fetch(`https://sheba-backend.onrender.com/pay/${amount}/${trx_id}`);
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/pay/${amount}/${trx_id}`);
             if (!response.ok) {
                 throw new Error("Failed to initiate payment");
             }

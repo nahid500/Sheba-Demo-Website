@@ -32,7 +32,7 @@ const Login = () => {
         };
 
         try {
-            const response = await fetch('https://shebaxyz-backend.onrender.com/login', {
+            const response = await fetch(`${process.env.REACT_APP_SHEBA_BACKEND_API}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
